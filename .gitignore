@@ -1,0 +1,14 @@
+# App build/dependency output
+app/node_modules/
+app/dist/
+
+# Tauri/Rust build output
+app/src-tauri/target/
+
+# Generated artifacts
+app/src-tauri/gen/
+
+# TS build info / generated config outputs
+app/*.tsbuildinfo
+app/vite.config.js
+app/vite.config.d.ts
