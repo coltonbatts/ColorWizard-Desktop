@@ -9,12 +9,22 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "desktop:dev": "tauri dev",
-    "desktop:build": "tauri build"
+    "desktop:dev:verbose": "bash scripts/dev-verbose.sh",
+    "desktop:dev:monitor": "bash scripts/monitor-build.sh",
+    "desktop:build": "tauri build",
+    "app:build": "unset CI && tauri build",
+    "app:install": "bash scripts/install-app.sh",
+    "app:restart": "bash scripts/restart-app.sh",
+    "app:kill": "bash scripts/kill-app.sh",
+    "app:open": "open \"$(cd .. && pwd)/ColorWizard Desktop.app\"",
+    "dev:clean": "bash scripts/kill-app.sh && npm run desktop:dev"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.10.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.10.0",

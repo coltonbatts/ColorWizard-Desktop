@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  color: #2f2b27;
-  background: radial-gradient(circle at 15% 20%, #f8f3ea 0%, #ece7de 40%, #e2dccf 100%);
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    'Noto Sans', 'Liberation Sans', sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', 'Courier New', monospace;
+}
+
+.dark {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', 'Courier New', monospace;
 }
 
 body {
@@ -17,4 +19,47 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* Terminal/tech aesthetic */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor::after {
+  content: '█';
+  animation: blink 1s infinite;
+  color: rgba(107, 154, 138, 0.8);
+}
+
+/* Markdown rendering styles */
+.prose {
+  color: #374151;
+}
+
+.prose code {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', monospace;
+}
+
+.prose pre {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.prose pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin: 1rem 0;
 }

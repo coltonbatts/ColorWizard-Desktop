@@ -1,0 +1,10 @@
+[package]
+name = "utils-plugin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tauri = { version = "2.10.0" }
+serde = { version = "1.0", features = ["derive"] }
+specta = { version = "2.0.0", features = ["tauri"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }

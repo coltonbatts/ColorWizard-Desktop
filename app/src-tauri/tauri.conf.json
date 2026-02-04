@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "ColorWizard Desktop",
+  "productName": "CB",
   "version": "0.1.0",
-  "identifier": "com.coltonbatts.colorwizard.desktop",
+  "identifier": "com.coltonbatts.cb",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://127.0.0.1:1420",
@@ -12,17 +12,21 @@
   "app": {
     "windows": [
       {
-        "title": "ColorWizard Desktop",
-        "width": 1440,
-        "height": 900,
-        "minWidth": 1100,
-        "minHeight": 700,
+        "title": "CB - Markdown Organizer",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 600,
         "resizable": true,
         "fullscreen": false
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost blob: data:",
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["**"]
+      }
     }
   },
   "bundle": {

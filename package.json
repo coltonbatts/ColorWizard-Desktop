@@ -1,0 +1,15 @@
+{
+  "name": "tauri-workspace",
+  "version": "1.0.0",
+  "description": "Tauri development workspace",
+  "private": true,
+  "scripts": {
+    "tauri:new": "bash scripts/create-tauri-app.sh",
+    "tauri:list": "bash scripts/tauri-cli.sh list",
+    "tauri:dev": "bash scripts/tauri-cli.sh dev",
+    "tauri:build": "bash scripts/tauri-cli.sh build",
+    "tauri:plugin:list": "bash scripts/tauri-cli.sh plugin list",
+    "tauri:help": "bash scripts/tauri-cli.sh help"
+  },
+  "workspaces": []
+}

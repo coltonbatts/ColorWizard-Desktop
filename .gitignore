@@ -1,14 +1,42 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
 # App build/dependency output
 app/node_modules/
 app/dist/
+node_modules/
 
 # Tauri/Rust build output
 app/src-tauri/target/
+**/target/
 
 # Generated artifacts
 app/src-tauri/gen/
+**/gen/
+
+# Built application bundles
+*.app/
+ColorWizard Desktop.app/
 
 # TS build info / generated config outputs
 app/*.tsbuildinfo
+*.tsbuildinfo
 app/vite.config.js
 app/vite.config.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
